@@ -1,8 +1,8 @@
 <template>
-  <nav class="bg-grey shadow-md p-4">
+  <nav class="bg-grey  shadow-md p-4">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <h1 class="text-xl font-bold">AfyaHelp</h1>
+      <h1 class="text-xl font-bold"><span class="text-red-600">Afya</span>Ai</h1>
 
       <!-- Hamburger Icon (Only on small screens) -->
       <button @click="isOpen = !isOpen" class="md:hidden text-2xl bg-blue">

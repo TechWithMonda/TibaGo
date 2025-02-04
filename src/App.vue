@@ -1,16 +1,17 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
-import HomeView from './views/HomeView.vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
-<NavBar/>
-
-<router-view></router-view>
-<Footer/>
+  <NavBar v-if="route.meta.showHeaderFooter !== false" />
+  <router-view />
+  <Footer v-if="route.meta.showHeaderFooter !== false" />
 </template>
 
 <style scoped>
-
+/* Add global styles if needed */
 </style>
