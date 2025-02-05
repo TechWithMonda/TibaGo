@@ -4,7 +4,7 @@
   <!-- Left Section: Text and Emergency Button -->
   <div class="max-w-2xl space-y-6 text-center lg:text-left mb-10 lg:mb-0 mr-8">
     <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 animate-fade-in-up">
-      <span class="text-red-600">Afya</span>AsistantAi
+      <span class="text-red-600">tibaGo</span>AsistantAi
     </h1>
     <p class="text-lg md:text-xl text-gray-600 leading-relaxed animate-fade-in-up delay-100">
       Instant Medical Assistance at Your Fingertips! 🚑📱<br>
@@ -98,14 +98,15 @@
               <div class="p-4 bg-red-50 rounded-lg mt-4">
                 <p class="font-semibold text-red-600">🏥 Problem Solved:</p>
                 <p>Instant access to nearby medical facilities with live availability updates</p>
-              </div>
-              <router-link 
+                <router-link 
                 to="/Locator" class="no-underline hover:no-underline focus:no-underline focus:outline-none">
   <li class="group flex flex-col items-center cursor-pointer">
     <i class="bi bi-geo-alt-fill text-2xl text-gray-600 group-hover:text-blue-500 transition duration-300"></i>
-    <span class="text-xs text-gray-600 group-hover:text-blue-500 transition duration-300">Location</span>
+    <span class="text-xs text-gray-600 group-hover:text-blue-500 transition duration-300">Click To See Hospitals near you</span>
   </li>
 </router-link>
+              </div>
+    
             </div>
           </div>
           <div class="lg:w-1/2 mt-8 lg:mt-0">

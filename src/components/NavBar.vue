@@ -2,7 +2,7 @@
   <nav class="bg-grey  shadow-md p-4">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <h1 class="text-xl font-bold"><span class="text-red-600">Afya</span>Ai</h1>
+      <h1 class="text-xl font-bold"><span class="text-red-600">tibaGo</span>Ai</h1>
 
       <!-- Hamburger Icon (Only on small screens) -->
       <button @click="isOpen = !isOpen" class="md:hidden text-2xl bg-blue">
@@ -52,10 +52,12 @@
     class="bg-w text-grey placeholder-gray-400 outline-none ml-2 w-full"
   />
 </div>
-  <li class="group flex flex-col items-center cursor-pointer justify-end">
-          <i class="bi bi-person-circle text-2xl group-hover:text-blue-500 transition duration-300"></i>
-          <span class="text-xs  group-hover:text-blue-500">Profile</span>
-        </li>
+  <router-link to="Profile">
+    <li class="group flex flex-col items-center cursor-pointer justify-end">
+            <i class="bi bi-person-circle text-2xl group-hover:text-blue-500 transition duration-300"></i>
+            <span class="text-xs  group-hover:text-blue-500">Profile</span>
+          </li>
+  </router-link>
    
       </ul>
     </div>

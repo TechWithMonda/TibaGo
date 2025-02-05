@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login.vue'
 import Register from '@/views/Register.vue'
 import Locator from '@/views/Locator.vue'
+import Profile from '@/views/Profile.vue'
 
 
 const router = createRouter({
@@ -40,6 +41,13 @@ const router = createRouter({
       component: Locator,
       meta:{showHeaderFooter: true},
     },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
+      meta:{showHeaderFooter: true},
+    },
+   
    
   ],
 })

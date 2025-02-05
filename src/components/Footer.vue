@@ -31,7 +31,7 @@
 
             <!-- Copyright -->
             <div class="border-t border-white-700 mt-8 pt-6 text-center text-sm opacity-75">
-                <p>&copy; 2023 AfyaHelp. All rights reserved.</p>
+                <p>&copy; 2023 tibaGo. All rights reserved.</p>
             </div>
         </div>
     </div>
