@@ -11,14 +11,23 @@
 
       <!-- Navbar Items (Hidden on small screens, visible on md+) -->
       <ul class="hidden md:flex space-x-6 justify-start w-full">
-        <li class="group flex flex-col items-center cursor-pointer">
-          <i class="bi bi-house text-2xl text-white-600 group-hover:text-blue-500 transition duration-300"></i>
-          <span class="text-xs text-white-500 group-hover:text-blue-500">Home</span>
-        </li>
-        <li class="group flex flex-col items-center cursor-pointer">
-          <i class="bi bi-geo-alt-fill text-2xl text-white-600 group-hover:text-blue-500 transition duration-300"></i>
-          <span class="text-xs  group-hover:text-blue-500">Location</span>
-        </li>
+        <router-link to="/" class="no-underline hover:no-underline focus:no-underline focus:outline-none">
+          <li class="group flex flex-col items-center cursor-pointer">
+            <i class="bi bi-house text-2xl text-white-600 group-hover:text-blue-500 transition duration-300"></i>
+            <span class="text-xs text-white-500 group-hover:text-blue-500">Home</span>
+          </li>
+        </router-link>
+   
+        <router-link 
+  to="/Locator" 
+  class="no-underline hover:no-underline focus:no-underline focus:outline-none"
+>
+  <li class="group flex flex-col items-center cursor-pointer">
+    <i class="bi bi-geo-alt-fill text-2xl text-gray-600 group-hover:text-blue-500 transition duration-300"></i>
+    <span class="text-xs text-gray-600 group-hover:text-blue-500 transition duration-300">Location</span>
+  </li>
+</router-link>
+
         <li class="group flex flex-col items-center cursor-pointer">
           <i class="bi bi-headset text-2xl  group-hover:text-blue-500 transition duration-300"></i>
           <span class="text-xs  group-hover:text-blue-500">Support</span>
@@ -54,14 +63,21 @@
     <!-- Mobile Menu (Appears when isOpen is true) -->
     <ul v-if="isOpen" class="md:hidden mt-4 space-y-4 text-center">
    
-      <li class="group flex flex-col items-center cursor-pointer">
-        <i class="bi bi-house text-2xl  group-hover:text-blue-500 transition duration-300"></i>
-        <span class="text-xs  group-hover:text-blue-500">Home</span>
-      </li>
-      <li class="group flex flex-col items-center cursor-pointer">
-        <i class="bi bi-geo-alt-fill text-2xl text-black-600 group-hover:text-blue-500 transition duration-300"></i>
-        <span class="text-xs  group-hover:text-blue-500">Location</span>
-      </li>
+      <router-link to="/" class="no-underline hover:no-underline focus:no-underline focus:outline-none">
+          <li class="group flex flex-col items-center cursor-pointer">
+            <i class="bi bi-house text-2xl text-white-600 group-hover:text-blue-500 transition duration-300"></i>
+            <span class="text-xs text-white-500 group-hover:text-blue-500">Home</span>
+          </li>
+        </router-link>
+      <router-link 
+  to="/Locator" 
+  class="no-underline hover:no-underline focus:no-underline focus:outline-none"
+>
+  <li class="group flex flex-col items-center cursor-pointer">
+    <i class="bi bi-geo-alt-fill text-2xl text-gray-600 group-hover:text-blue-500 transition duration-300"></i>
+    <span class="text-xs text-gray-600 group-hover:text-blue-500 transition duration-300">Location</span>
+  </li>
+</router-link>
       <li class="group flex flex-col items-center cursor-pointer">
         <i class="bi bi-headset text-2xl text-black-600 group-hover:text-blue-500 transition duration-300"></i>
         <span class="text-xs  group-hover:text-blue-500">Support</span>

@@ -99,11 +99,18 @@
                 <p class="font-semibold text-red-600">🏥 Problem Solved:</p>
                 <p>Instant access to nearby medical facilities with live availability updates</p>
               </div>
+              <router-link 
+                to="/Locator" class="no-underline hover:no-underline focus:no-underline focus:outline-none">
+  <li class="group flex flex-col items-center cursor-pointer">
+    <i class="bi bi-geo-alt-fill text-2xl text-gray-600 group-hover:text-blue-500 transition duration-300"></i>
+    <span class="text-xs text-gray-600 group-hover:text-blue-500 transition duration-300">Location</span>
+  </li>
+</router-link>
             </div>
           </div>
           <div class="lg:w-1/2 mt-8 lg:mt-0">
-            <img :src="doctor" alt="Hospital Locator" 
-                 class="rounded-xl shadow-md w-full h-64 object-cover animate-pop-in delay-500" />
+            <img :src="map" alt="Hospital Locator" 
+                 class="rounded-xl shadow-md w-92 h-87 object-cover animate-pop-in delay-500" />
           </div>
         </div>
 
@@ -140,7 +147,7 @@
     <div class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 animate-fade-in-up delay-700">
-          For Medical Professionals
+           AI trained Medical Professionals Model
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="(card, index) in cards" :key="index" 
@@ -201,6 +208,7 @@
 import { ref } from 'vue';
 import doctor from '../assets/doctor.png';
 import stats from '../assets/stats.png';
+import map from '../assets/map.png';
 
 const cards = ref([
   {

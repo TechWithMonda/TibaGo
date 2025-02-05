@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login.vue'
 import Register from '@/views/Register.vue'
+import Locator from '@/views/Locator.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,13 @@ const router = createRouter({
       component: Register,
       meta:{showHeaderFooter: false},
     },
+    {
+      path: '/locator',
+      name: 'Locator',
+      component: Locator,
+      meta:{showHeaderFooter: true},
+    },
+   
   ],
 })
 
