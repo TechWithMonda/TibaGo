@@ -144,36 +144,8 @@
       </div>
     </div>
 
-    <!-- Professionals Section -->
-    <div class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 animate-fade-in-up delay-700">
-           AI trained Medical Professionals Model
-        </h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="(card, index) in cards" :key="index" 
-               class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all animate-pop-in" 
-               :style="`animation-delay: ${700 + (index * 100)}ms`">
-            <div class="aspect-w-16 aspect-h-9 mb-6">
-              <img :src="doctor" alt="Video Consultation" 
-                   class="rounded-lg object-cover h-48 w-full" />
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">
-              {{ card.title }}
-            </h3>
-            <p class="text-gray-600">
-              {{ card.description }}
-            </p>
-            <button class="mt-4 text-red-600 font-semibold hover:underline">
-              Learn More →
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="relative bg-red-600 py-20 animate-fade-in delay-1000">
+     <!-- Stats Section -->
+     <div class="relative bg-red-600 py-20 animate-fade-in delay-1000">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="lg:w-1/2">
@@ -202,6 +174,36 @@
         </div>
       </div>
     </div>
+
+    <!-- Professionals Section -->
+    <div class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 animate-fade-in-up delay-700">
+           AI trained Medical Professionals Model
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div v-for="(card, index) in cards" :key="index" 
+               class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all animate-pop-in" 
+               :style="`animation-delay: ${700 + (index * 100)}ms`">
+            <div class="aspect-w-16 aspect-h-9 mb-6">
+              <img :src="doctor" alt="Video Consultation" 
+                   class="rounded-lg object-cover h-48 w-full" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              {{ card.title }}
+            </h3>
+            <p class="text-gray-600">
+              {{ card.description }}
+            </p>
+            <button class="mt-4 text-red-600 font-semibold hover:underline">
+              Learn More →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
   </div>
 </template>
 

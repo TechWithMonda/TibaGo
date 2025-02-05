@@ -4,7 +4,7 @@
             <div class="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start justify-between">
                 <!-- Mission Statement -->
                 <div class="max-w-xs">
-                    <h3 class="font-bold text-xl mb-4 font-serif text-blue-300">AfyaHelp</h3>
+                    <h3 class="font-bold text-xl mb-4 font-serif text-blue-300">tibaGo</h3>
                     <p class="text-sm leading-relaxed opacity-90">
                         Let's help you get the healthcare resources you need, right at your fingertips.
                     </p>
