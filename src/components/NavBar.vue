@@ -11,7 +11,7 @@
 
       <!-- Navbar Items (Hidden on small screens, visible on md+) -->
       <ul class="hidden md:flex space-x-6 justify-start w-full">
-        <router-link to="/" class="no-underline hover:no-underline focus:no-underline focus:outline-none">
+        <router-link to="/" class="no-underline hover:no-underline focus:no-underline focus:outline-none no-underline">
           <li class="group flex flex-col items-center cursor-pointer">
             <i class="bi bi-house text-2xl text-white-600 group-hover:text-blue-500 transition duration-300"></i>
             <span class="text-xs text-white-500 group-hover:text-blue-500">Home</span>
