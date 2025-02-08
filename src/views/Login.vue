@@ -120,57 +120,49 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
-  
-  const email = ref('');
-  const password = ref('');
-  const rememberMe = ref(false);
-  const showPassword = ref(false);
-  const loading = ref(false);
-  const errors = ref({
-    email: '',
-    password: ''
-  });
-  
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
-  
-  const validatePassword = (password) => {
-    return password.length >= 6;
-  };
-  
-  const handleLogin = async () => {
-    errors.value = { email: '', password: '' };
-    let isValid = true;
-  
-    if (!email.value) {
-      errors.value.email = 'Email is required';
-      isValid = false;
-    } else if (!validateEmail(email.value)) {
-      errors.value.email = 'Please enter a valid email address';
-      isValid = false;
+import { ref } from 'vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+// Define form data and state variables
+const email = ref('');
+const password = ref('');
+const rememberMe = ref(false);
+const showPassword = ref(false); // For password visibility toggle
+const loading = ref(false); // For showing loading state
+const errors = ref({}); // For form errors
+
+// Handle form submission
+const handleLogin = async () => {
+  loading.value = true;
+  errors.value = {}; // Reset errors
+
+  try {
+    const response = await axios.post('http://localhost:8000/api/login/', {
+      email: email.value,
+      password: password.value,
+    });
+
+    // Store the access token (or any other user data)
+    localStorage.setItem('access_token', response.data.access);
+
+    // Optionally, store refresh token or other data if needed
+    if (rememberMe.value) {
+      localStorage.setItem('remember_me', 'true');
     }
-  
-    if (!password.value) {
-      errors.value.password = 'Password is required';
-      isValid = false;
-    } else if (!validatePassword(password.value)) {
-      errors.value.password = 'Password must be at least 6 characters';
-      isValid = false;
+
+    // Redirect to the dashboard or any other protected route
+    router.push('/');
+  } catch (error) {
+    if (error.response && error.response.data) {
+      errors.value = error.response.data; // Show validation errors
     }
-  
-    if (!isValid) return;
-  
-    loading.value = true;
-    
-    // Simulate API call
-    setTimeout(() => {
-      loading.value = false;
-      alert('Login successful!');
-    }, 1500);
-  };
+  } finally {
+    loading.value = false;
+  }
+};
   </script>
   
   <style>
